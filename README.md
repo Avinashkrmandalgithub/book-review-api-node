@@ -31,7 +31,6 @@ A RESTful API for a book review platform built with **Node.js**, **Express**, an
 ├── middleware/        # Auth middleware
 ├── models/            # Mongoose models
 ├── routes/            # API route handlers
-├── config/            # DB connection logic
 ├── .env               # Environment config
 ├── .gitignore
 ├── README.md
