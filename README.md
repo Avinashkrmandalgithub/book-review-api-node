@@ -201,3 +201,9 @@ MIT
 ## ✍️ Author
 
 [Pankaj Mandal](https://github.com/Pankaj7808)
+
+
+## 👥 Contributors
+
+- [Pankaj Mandal](https://github.com/Pankaj7808) – Original backend API
+- [Avinash Kr Mandal](https://github.com/Avinashkrmandalgithub) – Frontend, API integration, full-stack implementation
