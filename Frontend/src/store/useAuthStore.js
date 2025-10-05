@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:  "http://localhost:3000/api",
+  baseURL: import.meta.env.VITE_API_URI, 
 });
 
 function parseJwt(token) {
@@ -16,7 +16,6 @@ function parseJwt(token) {
 }
 
 export const useAuthStore = create((set, get) => {
-  //  Check localStorage for token when store is initialized
   const token = localStorage.getItem("token");
   const user = token ? parseJwt(token) : null;
 
