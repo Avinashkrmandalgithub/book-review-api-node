@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import authRoutes from './routes/auth.js';
 import bookRoutes from './routes/books.js';
 import reviewRoutes from './routes/review.js';
@@ -19,6 +20,10 @@ mongoose.connect(MONGO_URI, {
   .catch(err => console.error('DB connection error:', err));
 
   app.use(express.json());
+  app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true,
+}));
 
 app.use('/api', authRoutes);
 app.use('/api', bookRoutes);
